@@ -1,9 +1,9 @@
 require 'json'
 class Player
-  VERSION = "Default Ruby folding player"
+  VERSION = "rand(999)"
 
   def bet_request(game_state)
-    puts game_state.inspect
+    raise game_state.inspect
     # data = JSON.load(game_state).first
     # puts data.inspect
     # require 'pry'; binding.pry
