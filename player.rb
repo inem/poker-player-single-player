@@ -9,7 +9,7 @@ class Player
     # data = JSON.load([ game_state ].to_json).first
     # require 'pry'; binding.pry
     # data =
-    rand(500)
+    rand(999)
   end
 
   def showdown(game_state)
