@@ -11,7 +11,7 @@ class Player
     # require 'pry'; binding.pry
 
     # data =
-
+    rand(999)
   end
 
   def showdown(game_state)
