@@ -1,9 +1,11 @@
 require 'json'
 class Player
-  VERSION = "smart boy"
+  VERSION = "extra smart boy"
 
   def bet_request(game_state)
     puts game_state.inspect
+    current_buy_in = game_state["current_buy_in"]
+    min_raise = ["minimum_raise"]
 
     hand = game_state["players"].select{|a|a["name"]  == "Single Player"}.first["hole_cards"]
     values = game_state["players"].select{|a|a["name"]  == "Single Player"}.first["hole_cards"].map{|a| a["rank"]}
@@ -13,23 +15,18 @@ class Player
       c1 = values.first
       c2 = values.last
 
-      if c1 == c2
-        a = a + 2
-      end
-
       a = a + 1 if["A", "K", "Q"].include?(c1)
       a = a + 1 if["A", "K", "Q"].include?(c2)
 
       if a == 0
         0
       elsif a == 1
-        rand(300)
+        current_buy_in + min_raise
       else
-        600
+        current_buy_in + min_raise * 3
       end
     else
-
-      rand(999)
+      rand(min_raise*3) + 2*min_raise
     end
   end
 
