@@ -4,7 +4,7 @@ class Player
   VERSION = "Default Ruby folding player"
 
   def bet_request(game_state)
-    puts JSON.read(game_state).inspect
+    puts JSON.load(game_state).inspect
 
   end
 
