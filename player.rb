@@ -1,6 +1,6 @@
 require 'json'
 class Player
-  VERSION = "extra smart boy"
+  VERSION = "easy, boy"
 
   def bet_request(game_state)
     puts game_state.inspect
@@ -22,9 +22,9 @@ class Player
       if a == 0
         0
       elsif a == 1
-        current_buy_in + min_raise
+        current_buy_in
       else
-        current_buy_in + min_raise * 3
+        current_buy_in + min_raise
       end
     else
       rand(min_raise*3) + 2*min_raise
