@@ -6,10 +6,10 @@ class Player
   VERSION = "Default Ruby folding player"
 
   def bet_request(game_state)
-    # data = JSON.load([ game_state ].to_json).first
+    data = JSON.load(game_state.to_json).first
     # require 'pry'; binding.pry
     # data =
-    999
+
   end
 
   def showdown(game_state)
