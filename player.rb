@@ -3,6 +3,8 @@ class Player
   VERSION = "smart boy"
 
   def bet_request(game_state)
+    puts game_state.inspect
+
     hand = game_state["players"].select{|a|a["name"]  == "Single Player"}.first["hole_cards"]
     values = game_state["players"].select{|a|a["name"]  == "Single Player"}.first["hole_cards"].map{|a| a["rank"]}
 
@@ -26,6 +28,7 @@ class Player
         600
       end
     else
+
       rand(999)
     end
   end
