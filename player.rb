@@ -5,7 +5,7 @@ class Player
 
   def bet_request(game_state)
     puts game_state.inspect
-    rand(999)
+    100
   end
 
   def showdown(game_state)
