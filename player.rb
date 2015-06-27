@@ -31,7 +31,7 @@ class Player
   end
 
   def showdown(game_state)
-    puts game_stats
+    puts game_state
   end
 
   private
