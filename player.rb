@@ -26,8 +26,6 @@ class Player
       else
         current_buy_in + min_raise
       end
-    else
-      rand(min_raise*3) + 2*min_raise
     end
   end
 
