@@ -4,8 +4,9 @@ class Player
 
   def bet_request(game_state)
     puts game_state.inspect
+
     current_buy_in = game_state["current_buy_in"]
-    min_raise = ["minimum_raise"]
+    min_raise = game_state["minimum_raise"]
 
     hand = game_state["players"].select{|a|a["name"]  == "Single Player"}.first["hole_cards"]
     values = game_state["players"].select{|a|a["name"]  == "Single Player"}.first["hole_cards"].map{|a| a["rank"]}
