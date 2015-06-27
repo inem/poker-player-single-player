@@ -7,7 +7,9 @@ class Player
 
   def bet_request(game_state)
     data = JSON.load(game_state.to_json).first
+    puts data.inspect
     # require 'pry'; binding.pry
+
     # data =
 
   end
